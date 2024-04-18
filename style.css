@@ -83,7 +83,7 @@ body {
 .number:hover,
 .operator:hover,
 .generate:hover {
-	background-color: lemonchiffon;
+	background-color: rgb(127, 220, 225);
 }
 
 .operator:active,
