@@ -6,6 +6,7 @@ Integral Goals for this project:
 * Integration of UPI and dynamic QR generation for transactions
 
 Integrations for later updates:
+* Make it a PWA for better accessibility
 * Google authentication for user sign-in
 * Use Google Workspace apps like Google Sheets to keep a track of transaction details
 * Google workspace integration will promote cross-platform access thereby facilitating economic and legal procedures
