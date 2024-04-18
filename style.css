@@ -16,7 +16,7 @@ body {
 	margin: 0 auto;
 	top: 20px;
 	position: relative;
-	border-radius: 5px;
+	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -42,11 +42,24 @@ body {
 
 #keyboard {
 	height: 400px;
+	background-color: #919191;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.generate {
+	width: 130px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 8px;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 .operator,
-.number,
-.empty {
+.number {
 	width: 50px;
 	height: 50px;
 	margin: 15px;
@@ -58,13 +71,19 @@ body {
 }
 
 .number,
-.empty {
+.generate {
 	background-color: #eaedef;
 }
 
 .number,
 .operator {
 	cursor: pointer;
+}
+
+.number:hover,
+.operator:hover,
+.generate:hover {
+	background-color: lemonchiffon;
 }
 
 .operator:active,
@@ -74,7 +93,7 @@ body {
 
 .operator:focus,
 .number:focus,
-.empty:focus {
+.generate:focus {
 	outline: 0;
 }
 
