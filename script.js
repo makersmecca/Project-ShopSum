@@ -33,7 +33,7 @@ for (var i = 0; i < operator.length; i++) {
 			printHistory("");
 			printOutput("");
 		}
-		else if (this.id == "backspace") {
+		else if (this.id == "del") {
 			var output = reverseNumberFormat(getOutput()).toString();
 			if (output) {//if output has a value
 				output = output.substr(0, output.length - 1);
