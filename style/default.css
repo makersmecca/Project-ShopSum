@@ -1,0 +1,45 @@
+.url {
+    text-decoration: none;
+    color: white;
+}
+
+#url:hover {
+    color: rgb(152, 169, 205);
+    /* color: #2e66a5; */
+}
+
+.valid {
+    color: rgb(85, 229, 85);
+}
+
+.invalid {
+    color: rgb(217, 38, 38);
+}
+
+.inner {
+    padding-left: 3px;
+}
+
+.icon {
+    max-width: 36px;
+    max-height: 36px;
+    border-radius: 50%;
+}
+
+body {
+    color: rgb(154, 201, 255);
+    background: rgba(48, 55, 63);
+    scrollbar-width: none;
+    /*For Firefox*/
+    -ms-overflow-style: none;
+    /* IE and Edge*/
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.heading {
+    color: white;
+}

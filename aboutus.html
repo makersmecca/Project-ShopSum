@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#262c32" />
+    <meta name="description" content="Log in page">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>ShopSum Home</title>
+
+
+    <link rel="manifest" href="manifest.json">
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
+
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/default.css">
+
+    <link href="images/icons/512x512.png" rel="icon">
+    <link href="/images/icons/192x192.png" rel="apple-touch-icon">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/152px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/180px.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/167px.png">
+
+    <script src="scripts/themeswitch.js" defer type="module"></script>
+    <!-- <script src="scripts/themeswitch.min.js" defer type="module"></script> -->
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-xl navbar-dark" style=" background-color: rgba(1, 0, 0, 0.2);">
+        <div class="container-fluid">
+            <div class="ms-lg-5 ms-2 col-2 col-sm-1">
+                <a class="navbar-brand url" href="index.html" id="BrandLogo">
+                    <img id="navIcon" class="img-fluid" src="images/icons/1024x1024.png" width="62px" height="62px"
+                        alt="Brand logo">
+                </a>
+            </div>
+            <a class="navbar-brand text-end text-md-start col-4 col-sm-5" href="index.html">
+                <span id="brandName" class="fs-2 fw-bold pt-3 ps-2">ShopSum</span>
+            </a>
+            <div class="form-check form-switch col d-flex justify-content-end pe-md-2 pe-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="themeBtn">
+                <label class="form-check-label ps-2" for="themeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3471b7" id="light"
+                        class="bi bi-brightness-high-fill pb-1 d-none" viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" id="dark"
+                        class="bi bi-moon-fill pb-1" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    </svg>
+                </label>
+            </div>
+            <!--put data-value="generate" for js code to ignore button press as calculator interaction-->
+            <button class="navbar-toggler collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-md-3 col col-sm-4" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-end" href="/">Home</a>
+                    <a class="nav-link text-end active" href="/aboutus.html">About Us</a>
+                    <a class="nav-link text-end" href="/feedback.html">Feedback</a>
+                    <a class="nav-link text-end" href="/termsncons.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert alert-info mb-0 py-2 text-center d-none" role="alert" id="alertDiv">
+        A new version is available for this app <a href="" class="btn btn-primary btn-sm ms-sm-2" id="updateapp">Update
+            Now</a>
+    </div>
+
+    <div class="container heading mt-3 mt-md-5 mb-3 ps-3 pe-1 justify-content-center">
+
+        <div class="heading fw-semibold fs-4">About Team Shop Sum</div>
+
+        <div class="fw-light lh-lg">
+            Welcome to Shop Sum, your go-to solution for hassle-free payment calculations and transactions.
+        </div>
+        <hr />
+        <div class="heading fw-semibold fs-5 mt-2">~ Our Mission ~</div>
+        <div class="fw-light lh-lg">At Shop Sum, our vision is to provide small vendors and roadside stalls a simple,
+            efficient, and secure way to handle payments, hence the name "Shop Sum".
+            <br> Everyone should have access to modern payment solutions without the need for complex procedures or
+            paperwork.
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="heading fw-semibold fs-5">~ What We Offer ~</div>
+                    <hr class="d-none d-md-block">
+                    <div class="container">
+                        <ul class="list">
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">Calculate Totals Easily:</div>
+                                Quickly sum up the cost of all items in an order with our intuitive interface.
+                            </li>
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">Generate QR Codes for Payments:</div>
+                                Create a custom QR code linked to your UPI ID for the total amount, which can be paid
+                                using any UPI app.
+                            </li>
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">Secure and Private:</div>
+                                We value your privacy. No bank details or KYC information are required.
+                            </li>
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">Fast and Convenient:</div>
+                                Save time and reduce errors with our seamless payment process, tailored specifically for
+                                small businesses.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="heading fw-semibold fs-5">~ Why Choose Shop Sum? ~</div>
+                    <hr class="d-none d-md-block">
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">User-Friendly:</div>
+                                Our app is designed with simplicity in mind, ensuring that even those with minimal
+                                technical skills can use it effortlessly.
+                            </li>
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">No Hidden Fees:</div>
+                                We believe in transparency, which is why our services come with no hidden charges.
+                            </li>
+                            <li>
+                                <div class="heading fw-normal pt-1 fs-6">Reliable Support:</div>
+                                Our dedicated support team is always here to help you with any questions or issues you
+                                might have.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="heading fw-semibold fs-5 mb-2 mt-2">~ Join Us ~</div>
+        <div class="fw-light lh-lg">Join the growing community of vendors who have discovered the convenience and
+            efficiency of Shop Sum.
+            <br>Simplify your payment process and focus more on what matters - your business and your customers.
+        </div>
+
+        <div class="container mt-3 mb-3">
+            <div class="row">
+                <div class="col-12 col-md-6 mt-4 mt-md-0">
+                    <div class="heading fw-semibold fs-5">~ Our Team ~</div>
+                    <hr class="d-none d-md-block">
+                    <div class="container">
+                        <div class="fw-light lh-lg ps-4">
+                            ShopSum was developed by ~ <a href="https://github.com/makersmecca"
+                                class="url text-decoration-underline">this</a> ~ guy.
+                            <br>He spends his days at his computer typing away or fighting virtual enemies in FPS Games
+                            while snacking.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mt-4 mt-md-0">
+                    <div class="heading fw-semibold fs-5">~ Contact Us ~</div>
+                    <hr class="d-none d-md-block">
+                    <div class="container">
+                        <div class="fw-light lh-lg ps-4">
+                            Have questions or need support?
+                            <br>Feel free to reach out to us at <a href="mailto:support@shopsum.com"
+                                class="url text-decoration-underline">support@shopsum.com</a>.
+                            <br>We'd love to hear from you!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-auto pt-2 pt-md-2 pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center">
+                    <a href="">
+                        <!-- <img src="images/icons/social-media-logos/facebook-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-facebook d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-2 d-md-flex align-items-center">
+                    <a href="">
+                        <!-- <img src="images/icons/social-media-logos/twitter-32.png" id="" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" id="dark"
+                            class="bi bi-twitter-x pt-1" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#2e66a5" id="light"
+                            class="bi bi-twitter-x pt-1 d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center">
+                    <a href="https://github.com/makersmecca">
+                        <!-- <img src="images/icons/social-media-logos/github-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-github d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-12 col-md-9 d-md-flex justify-content-end pt-3 pt-md-2">
+                    <a class="text-center url" id="appVer" href="/">© 2024 Copyright: ShopSum</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--d-none elements-->
+    <div id="calculator-cont"></div>
+
+
+    <script src="scripts/registerSW.js" type="module"></script>
+
+    <!-- links for Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

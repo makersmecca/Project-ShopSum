@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#262c32" />
+    <meta name="description" content="Log in page">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>ShopSum Home</title>
+
+
+    <link rel="manifest" href="manifest.json">
+    <!-- Bootstrap stylesheet -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style/bootstrap.css">
+
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/default.css">
+
+    <link href="images/icons/512x512.png" rel="icon">
+    <link href="/images/icons/192x192.png" rel="apple-touch-icon">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/152px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/180px.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/167px.png">
+
+    <!-- <script src="scripts/themeswitch.js" defer type="module"></script> -->
+    <script src="scripts/themeswitch.min.js" defer type="module"></script>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-xl navbar-dark" style=" background-color: rgba(1, 0, 0, 0.2);">
+        <div class="container-fluid">
+            <div class="ms-lg-5 ms-2 col-2 col-sm-1">
+                <a class="navbar-brand url" href="index.html" id="BrandLogo">
+                    <img id="navIcon" class="img-fluid" src="images/icons/1024x1024.png" width="62px" height="62px"
+                        alt="Brand logo">
+                </a>
+            </div>
+            <a class="navbar-brand text-end text-md-start col-4 col-sm-5" href="index.html">
+                <span id="brandName" class="fs-2 fw-bold pt-3 ps-2 text-decoration-line-through">&nbsp ShopSum
+                    &nbsp</span>
+            </a>
+            <div class="form-check form-switch col d-flex justify-content-end pe-md-2 pe-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="themeBtn">
+                <label class="form-check-label ps-2" for="themeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3471b7" id="light"
+                        class="bi bi-brightness-high-fill pb-1 d-none" viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" id="dark"
+                        class="bi bi-moon-fill pb-1" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    </svg>
+                </label>
+            </div>
+            <!--put data-value="generate" for js code to ignore button press as calculator interaction-->
+            <button class="navbar-toggler collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-md-3 col col-sm-4" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <div class="nav-link text-end active" href="">You're Offline</div>
+                    <div class="nav-link text-end text-decoration-line-through" href="">Home</div>
+                    <div class="nav-link text-end text-decoration-line-through" href="">About Us</div>
+                    <div class="nav-link text-end text-decoration-line-through" href="">Contact Us</div>
+                    <div class="nav-link text-end text-decoration-line-through" href="">Terms of Use</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5 pt-5 pb-5">
+        <div class="row mt-5">
+            <div class="col-12 text-center mt-5 pt-5">
+                <h3>Uh Oh.. Your Shop is Offline!
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-emoji-frown-fill blockquote" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m-2.715 5.933a.5.5 0 0 1-.183-.683A4.5 
+                    4.5 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.5 3.5 0 0 0 8 10.5a3.5 3.5 0 0 0-3.032 1.75.5.5 0 0 1-.683.183M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8" />
+                    </svg>
+                </h3>
+            </div>
+            <div class="col-12 text-center">
+                Please Check your Network
+            </div>
+            <div class="col-12 text-center mt-5">
+                <a href="/" type="button" class="btn btn-primary btn-lg">Retry
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                        <path
+                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+                    </svg></a>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto pt-2 pt-md-3 pb-md-3 pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col d-md-flex justify-content-center">
+                    © 2024 Copyright: ShopSum
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--d-none elements-->
+    <div id="calculator-cont"></div>
+
+    <!-- links for Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

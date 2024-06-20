@@ -1,0 +1,38 @@
+.viewbox {
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.topNav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.right-side {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav {
+    max-height: 50px;
+}
+
+.photo {
+    border-radius: 50%;
+}
+
+.dispName {
+    margin: 15px 0;
+}
+

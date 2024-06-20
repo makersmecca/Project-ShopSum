@@ -1,0 +1,197 @@
+{
+    "name": "ShopSum",
+    "short_name": "ShopSum",
+    "start_url": "index.html",
+    "id": "index.html",
+    "display": "standalone",
+    "display_override": [
+        "window-controls-overlay"
+    ],
+    "scope": ".",
+    "orientation": "portrait-primary",
+    "background_color": "#30373f",
+    "description": "Selling Simplified",
+    "theme_color": "#262c32",
+    "icons": [
+        {
+            "src": "/images/icons/16x16.png",
+            "sizes": "16x16",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/32x32.png",
+            "sizes": "32x32",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/ldpi.png",
+            "sizes": "36x36",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/48x48.png",
+            "sizes": "48x48",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/Icon.png",
+            "sizes": "57x57",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/64x64.png",
+            "sizes": "64x64",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/168x168.png",
+            "sizes": "168x168",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/256x256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/1024x1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "images/screenshots/ws-1.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "wide",
+            "label": "Homepage"
+        },
+        {
+            "src": "images/screenshots/ws-2.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "wide",
+            "label": "New User Signup Page"
+        },
+        {
+            "src": "images/screenshots/ws-3.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "wide",
+            "label": "Sign Up with Phone number"
+        },
+        {
+            "src": "images/screenshots/ws-4.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "wide",
+            "label": "Calculator Page"
+        },
+        {
+            "src": "images/screenshots/ws-5.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "wide",
+            "label": "Payment Processing Page"
+        },
+        {
+            "src": "images/screenshots/ws-6.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "wide",
+            "label": "Payment Receipt Pager"
+        },
+        {
+            "src": "images/screenshots/ns-1.png",
+            "sizes": "1290x2796",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "narrow",
+            "label": "Payment Receipt Pager"
+        },
+        {
+            "src": "images/screenshots/ns-2.png",
+            "sizes": "1290x2796",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "narrow",
+            "label": "Payment Receipt Pager"
+        },
+        {
+            "src": "images/screenshots/ns-3.png",
+            "sizes": "1290x2796",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "narrow",
+            "label": "Payment Receipt Pager"
+        },
+        {
+            "src": "images/screenshots/ns-4.png",
+            "sizes": "1290x2796",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "narrow",
+            "label": "Payment Receipt Pager"
+        },
+        {
+            "src": "images/screenshots/ns-5.png",
+            "sizes": "1290x2796",
+            "type": "image/png",
+            "purpose": "any",
+            "form_factor": "narrow",
+            "label": "Payment Receipt Pager"
+        }
+    ]
+}

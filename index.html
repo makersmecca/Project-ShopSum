@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#262c32" />
+    <meta name="description" content="Homepage">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>ShopSum Home</title>
+
+
+    <link rel="manifest" href="manifest.json">
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style/bootstrap.css"> -->
+
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/default.css">
+
+    <!-- homescreen shortcut icons for ios  -->
+
+    <link href="/images/icons/512x512.png" rel="icon">
+    <link href="/images/icons/192x192.png" rel="apple-touch-icon">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/152px.png"> <!--ipad-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/180px.png"> <!--iphone-->
+    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/167px.png"> <!--ipad-->
+
+    <!-- my js files -->
+    <script src="scripts/firebase.js" defer type="module"></script>
+    <!-- <script src="scripts/firebase.min.js" defer type="module"></script> -->
+    <script src="scripts/installpwa.js" defer type="module"></script>
+    <!-- <script src="scripts/installpwa.min.js" defer type="module"></script> -->
+    <script src="scripts/themeswitch.js" defer type="module"></script>
+    <!-- <script src="scripts/themeswitch.min.js" defer type="module"></script> -->
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container-fluid">
+            <div class="ms-lg-5 ms-2 col-2 col-sm-1">
+                <a class="navbar-brand url" href="index.html" id="BrandLogo">
+                    <img id="navIcon" class="img-fluid" src="images/icons/1024x1024.png" width="62px" height="62px"
+                        alt="Brand logo">
+                </a>
+            </div>
+            <a class="navbar-brand text-end text-md-start col-4 col-sm-5" href="index.html">
+                <span id="brandName" class="fs-2 fs-md-4 fw-bold pt-3 ps-2">ShopSum</span>
+            </a>
+            <div class="form-check form-switch col d-flex justify-content-end pe-md-2 pe-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="themeBtn">
+                <label class="form-check-label ps-2" for="themeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3471b7" id="light"
+                        class="bi bi-brightness-high-fill pb-1 d-none" viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" id="dark"
+                        class="bi bi-moon-fill pb-1" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    </svg>
+                </label>
+            </div>
+
+            <!--put data-value="generate" for js code to ignore button press as calculator interaction-->
+            <button class="navbar-toggler collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-lg-5 me-2 col-3 col-sm-4"
+                id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-end active" href="/">Home</a>
+                    <a class="nav-link text-end" href="/emailSignup.html">Sign Up</a>
+                    <a class="nav-link text-end " href="/aboutus.html">About Us</a>
+                    <a class="nav-link text-end" href="/feedback.html">Feedback</a>
+                    <a class="nav-link text-end" href="/termsncons.html">Terms of Use</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-info mb-0 py-2 text-center d-none" role="alert" id="alertDiv">
+        A new version is available for this app <a href="" class="btn btn-primary btn-sm ms-sm-2" id="updateapp">Update
+            Now</a>
+    </div>
+
+
+    <div class="container mt-3 mt-md-auto mb-md-auto ">
+        <form onsubmit="return false;">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="mb-3 mt-3 col-md-10">
+                            <h4><label for="emailID" class="form-label">Email Address</label></h4>
+                            <input type="email" class="form-control" id="emailID" placeholder="shopper@shopsum.shop"
+                                required>
+                        </div>
+                        <div class="mb-3 mt-3 col-md-10">
+                            <h4><label for="password" class="form-label">Password</label></h4>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="shh_it's_a_secret" required>
+                                <button class="btn btn-secondary secondarybtn input-group-text" id="bvwpw">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-eye-slash-fill" id="invisible" viewBox="0 0 16 16">
+                                        <path
+                                            d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z" />
+                                        <path
+                                            d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-eye-fill d-none" id="visible" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                        <path
+                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 align-items-md-center">
+                            <div class="row mt-md-5">
+                                <div class="col-12 col-xl-4 mt-3 mt-md-0 d-flex">
+                                    <button type="submit" class="btn secondarybtn btn-secondary" id="defaultsignin">Sign
+                                        In</button>
+                                    <div class="spinner-border mt-2 mb-1 ms-3 d-none" id="loader" role="status"></div>
+                                </div>
+                                <div class="col-12 col-xl-7 mt-4 mt-xl-0 d-none" id="installBtn">
+                                    <button type="button" class="btn btn-primary">Install this
+                                        App
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                            fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="col-12 mt-4 d-none" id="iosBanner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                        class="bi bi-browser-safari" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.25-14.75v1.5a.25.25 0 0 1-.5 0v-1.5a.25.25 0 0 1 .5 0m0 12v1.5a.25.25 0 1 1-.5 0v-1.5a.25.25 0 1 1 .5 0M4.5 1.938a.25.25 0 0 1 .342.091l.75 1.3a.25.25 0 0 1-.434.25l-.75-1.3a.25.25 0 0 1 .092-.341m6 10.392a.25.25 0 0 1 .341.092l.75 1.299a.25.25 0 1 1-.432.25l-.75-1.3a.25.25 0 0 1 .091-.34ZM2.28 4.408l1.298.75a.25.25 0 0 1-.25.434l-1.299-.75a.25.25 0 0 1 .25-.434Zm10.392 6 1.299.75a.25.25 0 1 1-.25.434l-1.3-.75a.25.25 0 0 1 .25-.434ZM1 8a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 0 .5h-1.5A.25.25 0 0 1 1 8m12 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 1 1 0 .5h-1.5A.25.25 0 0 1 13 8M2.03 11.159l1.298-.75a.25.25 0 0 1 .25.432l-1.299.75a.25.25 0 0 1-.25-.432Zm10.392-6 1.299-.75a.25.25 0 1 1 .25.433l-1.3.75a.25.25 0 0 1-.25-.434ZM4.5 14.061a.25.25 0 0 1-.092-.341l.75-1.3a.25.25 0 0 1 .434.25l-.75 1.3a.25.25 0 0 1-.342.091m6-10.392a.25.25 0 0 1-.091-.342l.75-1.299a.25.25 0 1 1 .432.25l-.75 1.3a.25.25 0 0 1-.341.09ZM6.494 1.415l.13.483a.25.25 0 1 1-.483.13l-.13-.483a.25.25 0 0 1 .483-.13M9.86 13.972l.13.483a.25.25 0 1 1-.483.13l-.13-.483a.25.25 0 0 1 .483-.13M3.05 3.05a.25.25 0 0 1 .354 0l.353.354a.25.25 0 0 1-.353.353l-.354-.353a.25.25 0 0 1 0-.354m9.193 9.193a.25.25 0 0 1 .353 0l.354.353a.25.25 0 1 1-.354.354l-.353-.354a.25.25 0 0 1 0-.353M1.545 6.01l.483.13a.25.25 0 1 1-.13.483l-.483-.13a.25.25 0 1 1 .13-.482Zm12.557 3.365.483.13a.25.25 0 1 1-.13.483l-.483-.13a.25.25 0 1 1 .13-.483m-12.863.436a.25.25 0 0 1 .176-.306l.483-.13a.25.25 0 1 1 .13.483l-.483.13a.25.25 0 0 1-.306-.177m12.557-3.365a.25.25 0 0 1 .176-.306l.483-.13a.25.25 0 1 1 .13.483l-.483.13a.25.25 0 0 1-.306-.177M3.045 12.944a.3.3 0 0 1-.029-.376l3.898-5.592a.3.3 0 0 1 .062-.062l5.602-3.884a.278.278 0 0 1 .392.392L9.086 9.024a.3.3 0 0 1-.062.062l-5.592 3.898a.3.3 0 0 1-.382-.034zm3.143 1.817a.25.25 0 0 1-.176-.306l.129-.483a.25.25 0 0 1 .483.13l-.13.483a.25.25 0 0 1-.306.176M9.553 2.204a.25.25 0 0 1-.177-.306l.13-.483a.25.25 0 1 1 .483.13l-.13.483a.25.25 0 0 1-.306.176" />
+                                    </svg>
+                                    Install this app on your iOS device: tap
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                                        id="light" class="bi bi-box-arrow-up pb-1 d-none" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                        id="dark" class="bi bi-box-arrow-up pb-1" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708z" />
+                                    </svg>
+
+                                    and then <span class="heading">Add to
+                                        Home Screen</span>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <span id="errorMsg" class="d-none"></span>
+                            <div id="forgotpw" class="col-12 d-none">
+                                <span id="reset"><a href="forgotpassword.html" class="url">Forgot Password?</a></span>
+                            </div>
+                            <div class="mt-3 pt-md-3 col-8 col-md-9">
+                                New to ShopSum? <a href="emailSignup.html" class="url">Sign Up</a> to continue.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div
+                        class="heading fs-4 fw-semibold mt-5 ps-2 ps-md-0 mt-md-5 pt-md-5 align-items-start text-md-center">
+                        OR
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="mt-4 mt-md-3 col-md-12 d-flex justify-content-md-center">
+                            <button
+                                class="btn secondarybtn btn-secondary mt-5 mt-md-5 pt-2 pb-2 align-items-center text-light"
+                                id="googlesignin" type="button">Continue with Google
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-google pb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                                </svg>
+                            </button>
+                            <div class="spinner-border mt-4 mt-md-5 ms-2 d-none" id="loaderG" role="status"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-md-2 col-md-12 d-flex justify-content-md-center">
+                        <a href="phoneSignup.html">
+                            <button class="btn secondarybtn btn-secondary mt-4 mt-md-5 pt-2 pb-2 align-items-center"
+                                id="phonesignin" type="button">Log In with Phone
+                                Number <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    fill="currentColor" class="bi bi-telephone-inbound-fill pb-1" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0" />
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+
+    </div>
+    <footer class="mt-auto pt-2 pt-md-2 pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center">
+                    <a href="">
+                        <!-- <img src="images/icons/social-media-logos/facebook-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-facebook d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-2 d-md-flex align-items-center">
+                    <a href="">
+                        <!-- <img src="images/icons/social-media-logos/twitter-32.png" id="" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" id="dark"
+                            class="bi bi-twitter-x pt-1" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#2e66a5" id="light"
+                            class="bi bi-twitter-x pt-1 d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center">
+                    <a href="https://github.com/makersmecca">
+                        <!-- <img src="images/icons/social-media-logos/github-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-github d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-12 col-md-9 d-md-flex justify-content-end pt-3 pt-md-2">
+                    <a class="text-center url" id="appVer" href="/">© 2024 Copyright: ShopSum</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--d-none elements-->
+    <div id="calculator-cont"></div>
+
+    <!-- registering service worker -->
+    <script src="scripts/registerSW.js" type="module"></script>
+
+    <!-- exiting app trial -->
+    <!-- <script src="scripts/exitApp.js"></script> -->
+
+    <!-- links for Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

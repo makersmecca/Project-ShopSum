@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#262c32" />
+    <meta name="description" content="Calculator Page">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>Calculator</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="images/icons/512x512.png" rel="icon">
+    <link href="/images/icons/192x192.png" rel="apple-touch-icon">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/152px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/180px.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/167px.png">
+
+    <!-- css files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/default.css">
+
+    <script src="scripts/signout.js" defer type="module"></script>
+    <!-- <script src="scripts/signout.min.js" defer type="module"></script> -->
+    <script src="scripts/themeswitch.js" defer type="module"></script>
+    <!-- <script src="scripts/themeswitch.min.js" defer type="module"></script> -->
+</head>
+
+<body class=" p-0 d-flex flex-column min-vh-100">
+
+    <!-- <div class="topnav pb-3 ps-4 pe-4" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="row pt-3 align-items-center">
+                <div class="col-9 col-md-8">
+                    <a class="url" id="BrandName" href="index.html">
+                        <h2>SHOPSUM</h2>
+                    </a>
+                </div>
+
+                <div class="col-3 col-md-4 d-md-flex flex-md-column align-items-md-center">
+                    <div class="profilepicture">
+                        <img src="/images/user.png" id="photo" class="rounded-circle img-fluid">
+                    </div>
+                </div>
+                <div class="ps-md-3" id="dispName"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-xl navbar-dark" style=" background-color: rgba(1, 0, 0, 0.2);">
+        <div class="container-fluid">
+            <div class="ms-lg-5 ms-2 col-2 col-sm-1">
+                <a class="navbar-brand url" href="index.html" id="BrandLogo">
+                    <img src="/images/user.png" id="photo" class="rounded-circle img-fluid" width="70px" height="70px">
+                </a>
+            </div>
+            <a class="navbar-brand text-end text-md-start col-4 col-sm-5" href="index.html">
+                <span id="brandName" class="fs-2 fw-bold pt-3 ps-2 ps-md-0">ShopSum</span>
+            </a>
+            <div class="form-check form-switch col d-flex justify-content-end pe-md-2 pe-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="themeBtn">
+                <label class="form-check-label ps-2" for="themeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3471b7" id="light"
+                        class="bi bi-brightness-high-fill pb-1 d-none" viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" id="dark"
+                        class="bi bi-moon-fill pb-1" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    </svg>
+                </label>
+            </div>
+            <button class="navbar-toggler collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-lg-5 me-2 col-4" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-end active" href="#" id="dispName"></a>
+                    <a class="nav-link text-end active" href="/calculator.html">Calculator</a>
+                    <a class="nav-link text-end" href="/savedata.html">Update UPI ID</a>
+                    <a class="nav-link text-end" href="/forgotpassword.html">Reset Password</a>
+                    <a class="nav-link text-end" id="Gsignout" href="#">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-info mb-0 py-2 text-center d-none" id="alertDiv">
+        A new version is available for this app <a href="" class="btn btn-primary btn-sm ms-sm-2" id="updateapp">Update
+            Now</a>
+    </div>
+    <div class="text-center text-md-start mt-4 pb-4">
+        <div class="ps-md-5 text-md-center text-light d-none" id="noupi">
+            <div class="heading fs-3 fw-semibold" id="toplabel">Please <em><a href="savedata.html" class="url"> update
+                        UPI ID</a></em> to Generate
+                QR</div>
+        </div>
+        <div class="ps-md-5 text-md-center text-light" id="loadingLabel">
+            <div class="heading fs-3 fw-semibold" id="defaultLabel">Loading UPI ID <div
+                    class="spinner-border spinner-border-sm mb-1" id="loader" role="status"></div>
+            </div>
+        </div>
+    </div>
+    <div class="viewbox mt-md-3 pt-md-4 mt-auto">
+        <div class="container">
+
+            <div class="row ms-md-5 ps-md-5 mt-auto">
+                <div class="col-12 col-md-6 align-items-center">
+                    <div class="contents d-flex flex-row justify-content-center">
+                        <div class="cal-container" id="calculator-cont">
+                            <input type="text" id="display" class="display" name="display" disabled>
+                            <div class="buttons pb-3">
+                                <button class="operator calbtn" name="firstrow" id="AC" data-value="AC">AC</button>
+                                <button class="operator calbtn" name="firstrow" data-value="DEL">DEL</button>
+                                <button class="operator calbtn" name="firstrow" data-value="%">%</button>
+                                <button class="operator calbtn" name="rightColumn" data-value="/">/</button>
+                                <button class="calbtn" data-value="7">7</button>
+                                <button class="calbtn" data-value="8">8</button>
+                                <button class="calbtn" data-value="9">9</button>
+                                <button class="operator calbtn" name="rightColumn" data-value="*">*</button>
+                                <button class="calbtn" data-value="4">4</button>
+                                <button class="calbtn" data-value="5">5</button>
+                                <button class="calbtn" data-value="6">6</button>
+                                <button class="operator calbtn" name="rightColumn" data-value="-">-</button>
+                                <button class="calbtn" data-value="1">1</button>
+                                <button class="calbtn" data-value="2">2</button>
+                                <button class="calbtn" data-value="3">3</button>
+                                <button class="operator calbtn" name="rightColumn" data-value="+">+</button>
+                                <button class="calbtn" data-value="0">0</button>
+                                <button class="calbtn" data-value="00">00</button>
+                                <button class="calbtn" data-value=".">.</button>
+                                <button class="operator calbtn" name="rightColumn" data-value="=">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-2 mb-4 container d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="text-center">
+                                <button class="btn secondarybtn btn-secondary btn-lg disabled" id="generate"
+                                    data-value="none">Generate
+                                    QR
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-qr-code-scan pb-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z" />
+                                        <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z" />
+                                        <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z" />
+                                        <path
+                                            d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z" />
+                                        <path d="M12 9h2V8h-2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-5 col-md-12 order-md-last ">
+                            <div class="">
+                                <a href="index.html" id="signoutlink">
+                                    <button class="btn btn-primary" id="Gsignout" data-value="signout">Sign
+                                        Out</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-7 col-md-12 mb-md-4 ">
+                            <div class="">
+                                <a href="savedata.html" id="signoutlink" type="button" class="btn btn-primary">
+                                    Update UPI ID
+                                </a>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto pt-2 pt-md-2 pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center">
+                    <a href="">
+                        <!-- <img src="images/icons/social-media-logos/facebook-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-facebook d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-2 d-md-flex align-items-center">
+                    <a href="">
+                        <!-- <img src="images/icons/social-media-logos/twitter-32.png" id="" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" id="dark"
+                            class="bi bi-twitter-x pt-1" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#2e66a5" id="light"
+                            class="bi bi-twitter-x pt-1 d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center">
+                    <a href="https://github.com/makersmecca">
+                        <!-- <img src="images/icons/social-media-logos/github-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-github d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-12 col-md-9 d-md-flex justify-content-end pt-3 pt-md-2">
+                    <a class="text-center url" id="appVer" href="/">© 2024 Copyright: ShopSum</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- <script src="scripts/main.js"></script> -->
+    <script src="scripts/main.min.js"></script>
+
+    <!-- exiting app trial -->
+    <!-- <script src="scripts/exitApp.js"></script> -->
+
+    <!-- registering service worker -->
+    <script src="scripts/registerSW.js" type="module"></script>
+
+
+
+    <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+    <!-- <script src="scripts/paymentGateway.js"></script> -->
+
+
+    <!-- This js file checks amount and forwards to qr generator -->
+    <!-- <script src="scripts/txnprocessing.js" type="module"></script> -->
+    <script src="scripts//txnprocessing.min.js" type="module"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

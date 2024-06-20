@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+body {
+    padding: 10px;
+    height: 100vh;
+}
+
+.contents {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.cal-container {
+    position: relative;
+    max-width: 320px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px 30px 20px;
+    background: #0d0d0d;
+    box-shadow: 10px 10px 7px #222426;
+}
+
+.display {
+    height: 90px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    pointer-events: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background: transparent;
+}
+
+
+
+.buttons {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+    color: white;
+    padding: 5px 5px;
+    border-radius: 17px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(92, 90, 90);
+    text-align: center;
+}
+
+button[name='firstrow'] {
+    background-color: #d3d3d3;
+    color: black;
+}
+
+button[name='rightColumn'] {
+    background-color: orange;
+}
+
+
+
+.buttons .generate {
+    background-color: white;
+    color: black;
+    grid-column: 2/4;
+}
+
+#signoutlink {
+    text-decoration: none;
+}
+
+.signout {
+    min-width: 124px;
+    min-height: 40px;
+    padding: 5px 5px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+button:active {
+    transform: scale(0.99);
+
+}
+
+.operator {
+    color: white;
+}
+
+#generate {
+    box-shadow: 10px 10px 7px #222426;
+}
