@@ -32,6 +32,14 @@ const updateBtn = document.getElementById("updateapp");
 const alertDiv = document.getElementById("alertDiv");
 console.log("service worker");
 
+let permissionState;
+window.addEventListener("load", (e) => {
+    Notification.requestPermission().then(e => {
+        //console.log(e);
+        permissionState = e;
+    })
+})
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/serviceWorker.js')
         .then(registration => {
@@ -50,6 +58,31 @@ if ('serviceWorker' in navigator) {
                         if (navigator.serviceWorker.controller) {
                             //console.log(newWorker);
                             // New update available
+                            if (permissionState === "granted") {
+                                //console.log("new notif");
+
+                                // registration.showNotification("Shop Update!",
+                                //     {
+                                //         body: "A new Update is ready to be installed!",
+                                //         icon: "images/icons/48x48.png",
+                                //         badge: "images/icons/48x48.png",
+                                //     })
+
+                                const notif = new Notification("Shop Update!", {
+                                    body: "A new Update is ready to be installed!",
+                                    icon: "images/icons/48x48.png",
+                                    badge: "images/icons/48x48.png",
+                                })
+
+                                notif.addEventListener("click", (e) => {
+                                    e.preventDefault();
+                                    //console.log(e);
+                                    //window.open("http://localhost:5500/", "_parent");
+                                    window.open("https://letsshopsum.netlify.app/", "_parent");
+                                })
+                            }
+
+                            //alert("new service worker");
                             updateReady(newWorker);
                         }
                     }
