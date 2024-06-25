@@ -2,11 +2,12 @@
 ShopSum is live! <a href = "https://letsshopsum.netlify.app">Check out ShopSum</a>.<br/>
 ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and even our humble Corner/Kirana Stores.<br/>
 <br>
+<div><strong>!! NOTE:</strong></div>
 <strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here to prevent security issues.</strong><br>
 <br>
 The interface of the app is essentially based around a Calculator, to calculate the total cost of all the items in an order and receive payments through a single-use QR Code, generated specifically for the current transaction amount, scannable via any UPI App.<br/>
 <br/>
-Unlike third-party payment gateway service providers, ShopSum requires no KYC Verification, or bank details. Just sign-up and add your UPI ID to which you wish to receive your payments.<br/> 
+Unlike third-party payment gateway service providers, ShopSum requires no KYC Verification or bank details. Just sign-up and add your UPI ID to which you wish to receive your payments.<br/> 
 The UPI ID gets linked to your sign-in method and just like that you’re good to go. It’s free, it’s fast and the entire process is streamlined.<br/>
 <br/>
 <h3>Features</h3>
