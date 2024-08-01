@@ -1,7 +1,7 @@
 let installPrompt = null;
 const installButton = document.getElementById("installBtn");
 const iosBanner = document.getElementById("iosBanner");
-const redirectButton = document.getElementById("redirectBtn");
+//const redirectButton = document.getElementById("redirectBtn");
 const permDiv = document.getElementById("permDiv")
 const allowNotifBtn = document.getElementById("allowNotif");
 
@@ -15,7 +15,7 @@ const isIos = () => {
 
 if (isIos() && !standaloneCheck()) {
     iosBanner.classList.remove("d-none");
-}
+} else { iosBanner.classList.add("d-none"); }
 
 const requestNotifPerm = () => {
     Notification.requestPermission().then(e => {
@@ -31,36 +31,38 @@ const requestNotifPerm = () => {
     })
 }
 
+// App install status check
+// window.addEventListener("load", () => {
+//     requestNotifPerm();
+//     if ((window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone) {
+//         //console.log('display-mode is standalone');
+//         redirectButton.classList.add("d-none");
+//     }
+//     else if ((window.matchMedia('(display-mode: browser)').matches) || (!navigator.standalone)) {
+//         //console.log("disp mode browser");
+//         if (installButton.classList.contains("d-none")) {
+//             redirectButton.classList.remove("d-none");
+//         }
+//     }
+// })
 
-window.addEventListener("load", () => {
-    requestNotifPerm();
-    if ((window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone) {
-        //console.log('display-mode is standalone');
-        redirectButton.classList.add("d-none");
-    }
-    else if ((window.matchMedia('(display-mode: browser)').matches) || (!navigator.standalone)) {
-        //console.log("disp mode browser");
-        if (installButton.classList.contains("d-none")) {
-            redirectButton.classList.remove("d-none");
-        }
-    }
-})
+// redirectButton.addEventListener("click", () => {
+//     //console.log("redirecting..");
+//     window.open("index.html", "_parent");
+// })
 
 allowNotifBtn.addEventListener("click", () => {
     requestNotifPerm();
 })
 
 
-redirectButton.addEventListener("click", () => {
-    //console.log("redirecting..");
-    window.open("index.html", "_parent");
-})
+
 
 window.addEventListener("beforeinstallprompt", (event) => {
     //console.log(event);
     event.preventDefault();
     installPrompt = event;
-    redirectButton.classList.add("d-none");
+    //redirectButton.classList.add("d-none");
     installButton.classList.remove("d-none");
 
 });
