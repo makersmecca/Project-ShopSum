@@ -1,6 +1,6 @@
 -- Use this for order id generation in payment gateway js code:
     //
-    "OID".concat(Math.floor(Math.random() * 500)+100).concat("END")
+      "OID".concat(Math.floor(Math.random() * 500)+100).concat("END")
     //
     This will generate a random order id with "OID" in the beginning + a random number between 100 & 500 + "END" at the end
 
@@ -8,9 +8,14 @@
 -- generate API key from razorpay dashboard settings menu[DEPRECIATED]
 -- add the generated api key to the "key:" field in the payment gateway js file[DEPRECIATED]
 
-
 ----------------------------------------------------- **Things to add** --------------------------------------------------------------------------
 
+-- Find a way to check if pwa is installed or not and inform the user of the install status when opened in browser. [PENDING]
+  |__implementnig this feature is not possible as of now as the browser only creates the "appinstalled" event once after the PWA has been installed.
+  |__for successive app launches the browser does not create any more "beforeInstall" prompt and thereby no "appinstalled" prompt either.
+
+-- Add additional Sign in options using other OAuth providers. [PENDING]
+-- Google Sign in page now provides user with ShopSum app name and logo instead of the project name. [FIXED]
 -- Add button in calculator page to add/update upi id of the currently active user [DONE]
 -- If current user does not have an upi id associated with the account disable the generate button and ask user to add upi id to enable it [DONE]
 -- Make app into a Progressive Web App [DONE]
@@ -24,26 +29,31 @@
 
 ----------------------------------------------------- **Things to fix** --------------------------------------------------------------------------
 
--- Put logo and brand name in the same row with padding in between.
--- Phone number sign in is not persistant [FIXED]
+-- Put logo and brand name in the same row with padding in between.[PENDING]
+-- Add encryption to session storage. [PENDING]
+
+-- Updated Feedback Form with custom feedback form to submit custom responses to google forms. [FIXED]
+-- Update Feedback page css [FIXED]--> created a custom feedback from that submits a google form in the background once the user enters their feedback.
+-- Update Status Bar color when opening the pwa on a mobile device. [FIXED]
+-- Phone number sign in is not persistant. [FIXED]
 -- multiple decimal points being added needs to be fixed. When evaluating more than one operands with decimal values, the existing logic fails. [FIXED]
--- Add encryption to session storage [PENDING]
 -- Alignment on the calculator.html page is wonky, both in the widescreen and min-width sizes [FIXED]
 -- Add proper boostrap layout to the savedata and qrgenerate pages [FIXED]
-
 -- Sign in Loading animation layout issue [FIXED]
 -- Arrange the flexbox elements in the calculator.html page [FIXED]
 -- When input length exceeds beyond 11 characters it doesn't show up in the display box. [FIXED with alert message]
--- If calculated value has decimal point remove digits from two places after decimal point [FIXED]
--- If calculated value contains special characters or is a negative value then prevent payment generation [FIXED]
--- Facing issue with fetching amount data into options var in paymentGateway.js [FIXED]
--- Fix adding multiple math operators one after the other [FIXED]
--- Output needs to be cleared after generating payment [FIXED]
--- Remove additional payment methods and only keep UPI & Card [FIXED]
--- Callback URL is not redirecting to the paymentstatus.html page [FIXED, used Handler function with window.open function instead of callback]
--- Issue with passing float type data to session storage due to incorrect datatype parsing. [FIXED]
--- Updated Order ID generation syntax to a more randomized approach
+-- If calculated value has decimal point remove digits from two places after decimal point. [FIXED]
+-- If calculated value contains special characters or is a negative value then prevent payment generation. [FIXED]
+-- Facing issue with fetching amount data into options var in paymentGateway.js. [FIXED]
+-- Fix adding multiple math operators one after the other. [FIXED]
+-- Output needs to be cleared after generating payment. [FIXED]
+-- Remove additional payment methods and only keep UPI & Card. [FIXED]
+-- Callback URL is not redirecting to the paymentstatus.html page. [FIXED, used Handler function with window.open function instead of callback]
+-- Issue with passing float type data to session storage due to incorrect datatype parsing. [FIXED] 
+-- Updated Order ID generation syntax to a more randomized approach. [FIXED]
 
+---------------------------------------------------------- ** Google Project Details ** -----------------------------------------------------------
+-- Original Project Name: project-193970211827
 ------------------------------------------------------------------ **Features** -------------------------------------------------------------------
 
 -- Pressing enter signs in user in homepage
@@ -71,25 +81,3 @@ UPI Linking Documentation -- "https://www.labnol.org/files/linking.pdf"
 
 iOS navigator prompt trigger -- "https://dockyard.com/blog/2017/09/27/encouraging-pwa-installation-on-ios"
                              -- "https://www.netguru.com/blog/pwa-ios"
- https://media.discordapp.net/attachments/1001208613697749122/1250382954904158220/1024px.png?ex=666abd5f&is=66696bdf&hm=ecd685f11557284d1f6280b990c2556122a025a45003f82bd54946b66650e793&                             
-
-
-
-
-
-
-https://drive.google.com/file/d/1YRQuMnmLOLBB-VJfj3XcDlOIuSwHLWyT/view?usp=drivesdk
------------------------------------------- NOTES ---------------------------------------------
-** set the rules as following to let authenticated users read/write data into th rtdb **
-{
-  "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
-  }
-}
-
-**KEYS**
--------------------------------------- Razorpay ----------------------------------------------
-API -- rzp_test_viheGo2GrraYRt
-Secret -- QanDzZaxbkwxqX1iZA2n7mHt
------------------------------------------------------------------------------------------------
