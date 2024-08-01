@@ -27,6 +27,7 @@ onAuthStateChanged(auth, (user) => {
         // console.log(user);
         // console.log(user.uid);
         //console.log(user.displayName);
+        //console.log(user.photoURL);
         const readUPI = ref(db, 'users/' + user.uid + '/upi');
         onValue(readUPI, (snapshot) => {
             userdata = snapshot.val();
@@ -39,7 +40,8 @@ onAuthStateChanged(auth, (user) => {
             if (userdata != null) {
                 loadingLabel.classList.add("d-none");
                 document.getElementById("generate").classList.remove("disabled");
-                document.getElementById("toplabel").innerHTML = "UPI ID: " + userdata;
+                // document.getElementById("toplabel").innerHTML = "UPI ID: " + userdata;
+                document.getElementById("toplabel").innerHTML = `UPI ID: ${userdata}`;
                 noupi.classList.remove("d-none");
             }
             else {
@@ -51,10 +53,12 @@ onAuthStateChanged(auth, (user) => {
 
         if (user.displayName != null) {
             //split() returns an array by splitting a string depending on the token passed. selecting the first index in this syntax
-            document.getElementById("dispName").innerHTML = "User: ".concat((user.displayName).split(" ")[0]);
+            //document.getElementById("dispName").innerHTML = "User: ".concat((user.displayName).split(" ")[0]);
+            document.getElementById("dispName").innerHTML = `User: ${(user.displayName).split(" ")[0]}`;
         }
         else if (user.email != null) {
-            document.getElementById("dispName").innerHTML = "User: ".concat((user.email).split("@")[0])
+            //document.getElementById("dispName").innerHTML = "User: ".concat((user.email).split("@")[0]);
+            document.getElementById("dispName").innerHTML = `User: ${(user.email).split("@")[0]}`;
         }
         else {
             document.getElementById("dispName").innerHTML = "User";
