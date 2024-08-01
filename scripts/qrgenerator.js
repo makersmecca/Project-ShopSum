@@ -20,37 +20,28 @@ const auth = getAuth(app);
 
 const db = getDatabase(app);
 
-const username = "Shop Sum Vendor";
 const amt = sessionStorage.getItem("amount");
-const txnNote = "Payment_for_INR:" + amt;
+
 
 const qrdiv = document.getElementById("qrcode");
 
 const receiptbtn = document.getElementById("receipt");
 
 const togglebtn = document.getElementById("themeBtn");
-var userdata = " ";
-var uName = " ";
-var upiID = " ";
-var upiURL = "";
 
-var options = {
-    text: null,
-    colorLight: "#30373f",
-    colorDark: "#fff",
-    logo: "images/icons/512x512.png",
-    logoBackgroundTransparent: true,
-    drawer: 'svg'
-};
+
+
 
 document.getElementById("total").innerHTML = "INR " + amt;
 
 onAuthStateChanged(auth, (user) => {
+    // var userdata = " ";
+    // var uName = " ";
     if (user) {
-        uName = user.displayName;
+        var uName = user.displayName;
         const readUPI = ref(db, 'users/' + user.uid + '/upi');
         onValue(readUPI, (snapshot) => {
-            userdata = snapshot.val();
+            var userdata = snapshot.val();
 
             qrdiv.innerHTML = "";
             document.getElementById("loader").classList.add("d-none");
@@ -58,12 +49,27 @@ onAuthStateChanged(auth, (user) => {
             params.set("am", amt);
             params.set("pn", uName);
 
-            upiURL = "upi://pay?pa=" + userdata + "&" + params.toString() + "&tn=" + txnNote;
+            //upiURL = "upi://pay?pa=" + userdata + "&" + params.toString() + "&tn=" + txnNote;
+            const txnNote = `Payment_for_INR${amt}_to_${params.get("pn").replace(/\s/g, "+")}`;
+
+            //userdate = user@upi
+            //para
+
+            //var text = `upi://pay?pa="${userdata}&${params.get("pn").replace(/\s/g, "")}&txnNote&${params.get("am").replace(/\s/g,"")}&cu=INR`;
+            var options = {
+                text: `upi://pay?pa=${userdata}&${params.get("pn").replace(/\s/g, "")}&${txnNote}&am=${params.get("am").replace(/\s/g, "")}&cu=INR`, //the /g removes occurrences globally from the string, without it only first instance is removed
+                colorLight: "#30373f",
+                colorDark: "#fff",
+                logo: "images/icons/512x512.png",
+                logoBackgroundTransparent: true,
+                drawer: 'svg'
+            };
+            // console.log(options.text);
             if (localStorage.getItem("currentTheme") === "light") {
                 options.colorLight = "#fff";
                 options.colorDark = "#30373f";
             }
-            options.text = upiURL;
+            //options.text = upiURL;
 
             new QRCode(qrdiv, options); //calling function to generate the QR Code suing CDN Lib
             receiptbtn.classList.remove("d-none");
