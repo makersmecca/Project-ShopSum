@@ -36,8 +36,11 @@ shareBtn.addEventListener("click", () => {
 sendBtn.addEventListener("click", () => {
     waNum = (document.getElementById("receiverNum").value).toString();
     //console.log(waNum);
-    const msg = "Hello from ShopSum!%0AHere's your receipt:%0AYour Order ID: "+order+",%0APayment Reference ID: "+ref+",%0AOrder Amount: "+amt+"%0AThank you!";
-    var waUrl = "https://wa.me/" + waNum + "?text=" + msg;
+    //const msg = "Hello from ShopSum!%0AHere's your receipt:%0AYour Order ID: "+order+",%0APayment Reference ID: "+ref+",%0AOrder Amount: "+amt+"%0AThank you!";
+    const msg = `Hello from ShopSum!%0AHere's your receipt:%0AYour Order ID: ${order},%0APayment Reference ID: ${ref},%0AOrder Amount: ${amt}%0AThank you!`;
+
+    //var waUrl = "https://wa.me/" + waNum + "?text=" + msg;
+    var waUrl = `https://wa.me/${waNum}?text=${msg}`;
     //console.log(waUrl);
     window.open(waUrl);
 })
