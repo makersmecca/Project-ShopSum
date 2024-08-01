@@ -1,4 +1,4 @@
-const version = "v0.8.5.1"
+const version = "v0.8.7.1"
 const serviceworkerobj = "shopsummary_" + version;
 // console.log(serviceworkerobj);
 // console.log('hello from service worker');
@@ -21,19 +21,21 @@ const assets = [
     "/style/paymentStatus.css",
     "/style/style.css",
 
-    "/scripts/emailSignup.js",
-    "/scripts/firebase.js",
-    "/scripts/forgotpw.js",
-    "/scripts/installpwa.js",
-    "/scripts/main.js",
-    "/scripts/phoneSignup.js",
-    "/scripts/pwreset.js",
-    "/scripts/qrgenerator.js",
-    "/scripts/saveupi.js",
-    "/scripts/signout",
-    "/scripts/success.js",
-    "/scripts/txnprocessing.js",
-    "scripts/themeswitch.js",
+    "/scripts/emailSignup.min.js",
+    "/scripts/firebase.min.js",
+    "/scripts/forgotpw.min.js",
+    "/scripts/installpwa.min.js",
+    "/scripts/main.min.js",
+    "/scripts/phoneSignup.min.js",
+    "/scripts/pwreset.min.js",
+    "/scripts/qrgenerator.min.js",
+    "/scripts/saveupi.min.js",
+    "/scripts/signout.js",
+    "/scripts/success.min.js",
+    "/scripts/txnprocessing.min.js",
+    "/scripts/themeswitch.min.js",
+    "/scripts/feedBackForm.min.js",
+    "scripts/welcomeMsg.min.js",
 
     "/images/icons/16x16.png",
     "/images/icons/32x32.png",
