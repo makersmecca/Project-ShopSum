@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#262c32" />
+    <meta name="description" content="Log in page">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>ShopSum Home</title>
+
+
+    <link rel="manifest" href="manifest.json">
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
+
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/default.css">
+
+    <link href="images/icons/512x512.png" rel="icon">
+    <link href="/images/icons/192x192.png" rel="apple-touch-icon">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/152px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/180px.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/167px.png">
+
+    <!-- <script src="scripts/themeswitch.js" defer type="module"></script> -->
+    <script src="scripts/themeswitch.min.js" defer type="module"></script>
+    <script src="scripts/feedBackForm.min.js" defer></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-xl navbar-dark" style=" background-color: rgba(1, 0, 0, 0.2);">
+        <div class="container-fluid">
+            <div class="ms-lg-5 ms-2 col-2 col-sm-1">
+                <a class="navbar-brand url" href="index.html" id="BrandLogo">
+                    <img id="navIcon" class="img-fluid" src="images/icons/1024x1024.png" width="62px" height="62px"
+                        alt="Brand logo">
+                </a>
+            </div>
+            <a class="navbar-brand text-end text-md-start col-4 col-sm-4" href="index.html">
+                <span id="brandName" class="fs-2 fw-bold pt-3 ps-2">ShopSum</span>
+            </a>
+            <div class="form-check form-switch col d-flex justify-content-end pe-md-2 pe-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="themeBtn">
+                <label class="form-check-label ps-2" for="themeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3471b7" id="light"
+                        class="bi bi-brightness-high-fill pb-1 d-none" viewBox="0 0 16 16">
+                        <path
+                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" id="dark"
+                        class="bi bi-moon-fill pb-1" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    </svg>
+                </label>
+            </div>
+            <!--put data-value="generate" for js code to ignore button press as calculator interaction-->
+            <button class="navbar-toggler collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-md-3 col col-sm-4" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-end" href="/" role="link" aria-label="Homepage">Home</a>
+                    <a class="nav-link text-end" href="/emailSignup.html" aria-label="Sign up with email"
+                        role="link">Sign Up</a>
+                    <a class="nav-link text-end" href="/aboutus.html" aria-label="About Us" role="link">About Us</a>
+                    <a class="nav-link text-end active" href="/feedbackForm.html" aria-label="Feedback page"
+                        role="link">Feedback</a>
+                    <a class="nav-link text-end" href="/termsncons.html" aria-label="Terms and conditions"
+                        role="link">Terms of Use</a>
+                    <a class="nav-link text-end" href="/privacyPolicy.html" aria-label="Privacy Policy"
+                        role="link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-info mb-0 py-2 text-center d-none" role="alert" id="alertDiv">
+        A new version is available for this app <a href="" class="btn btn-primary btn-sm ms-sm-2" id="updateapp">Update
+            Now</a>
+    </div>
+
+    <div id="feedbackForm" class="">
+        <div class="container heading mt-3 mt-md-5 mb-3 ps-3 pe-1 justify-content-center">
+            <div class="heading fw-semibold fs-4">We Want to Hear From You!</div>
+            <div class="fs-6 fw-light lh-lg">Your feedback helps us understand what we are doing right and what we can
+                improve upon.</div>
+            <hr>
+        </div>
+
+        <div class="container mt-3 mt-md-auto mb-md-auto pb-4">
+            <div class="ps-md-4">
+                <form id="feedbackForm" action="/">
+                    <div class="form-group row">
+                        <div class="col-md-5 align-self-center mt-2 mt-md-0 mb-md-5 pb-md-5 pe-md-5">
+                            <label for="nameField" class="form-label fs-5 fw-light">Name *</label>
+                            <input type="text" class="form-control mw-md-50" id="nameField" placeholder="happyshopper"
+                                contenteditable="true" role="textbox" required>
+
+                            <label for="emailField" class="form-label mt-4 fs-5 fw-light">Email address <span
+                                    class="fs-6 fw-light">(Optional)</span> </label>
+                            <input type="email" class="form-control mw-md-50" id="emailField"
+                                placeholder="shopper@shopsum.shop" contenteditable="true" role="textbox">
+                        </div>
+                        <div class="col-md-7 mt-3 ps-md-5">
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="pt-2 heading fw-semibold">1. How would you rate your overall experience
+                                        with ShopSum?</div>
+                                    <div class="container">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question1"
+                                                id="flexRadioDefault1" value="Super_Stellar" required>
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Super Stellar
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question1"
+                                                id="flexRadioDefault2" value="Fantastic" required>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Fantastic
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question1"
+                                                id="flexRadioDefault3" value="Meh_Its_Okay" required>
+                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                Meh, It’s Okay
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question1"
+                                                id="flexRadioDefault4" value="Could_Be_Better" required>
+                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                Could Be Better
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question1"
+                                                id="flexRadioDefault5" value="Yikes_Needs_Work" required>
+                                            <label class="form-check-label" for="flexRadioDefault5">
+                                                Yikes, Needs Work
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pt-2 heading fw-semibold">2. What do you like the most about Shop Sum?
+                                    </div>
+                                    <div class="container">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question2"
+                                                id="flexRadioDefault6" value="User_friendly_interface" required>
+                                            <label class="form-check-label" for="flexRadioDefault6">
+                                                User-friendly interface
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question2"
+                                                id="flexRadioDefault7" value="Fast_and_efficient" required>
+                                            <label class="form-check-label" for="flexRadioDefault7">
+                                                Fast and efficient
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question2"
+                                                id="flexRadioDefault8" value="Easy_payment_process" required>
+                                            <label class="form-check-label" for="flexRadioDefault8">
+                                                Easy payment process
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question2"
+                                                id="flexRadioDefault9" value="Useful_features" required>
+                                            <label class="form-check-label" for="flexRadioDefault9">
+                                                Useful features
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question2"
+                                                id="flexRadioDefault10" value="Customer_support" required>
+                                            <label class="form-check-label" for="flexRadioDefault10">
+                                                Customer support
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="pt-2 heading fw-semibold">3. How often do you use Shop Sum?</div>
+                                    <div class="container">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question3"
+                                                id="flexRadioDefault11" value="Daily" required>
+                                            <label class="form-check-label" for="flexRadioDefault11">
+                                                Daily
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question3"
+                                                id="flexRadioDefault12" value="Weekly" required>
+                                            <label class="form-check-label" for="flexRadioDefault12">
+                                                Weekly
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question3"
+                                                id="flexRadioDefault13" value="Monthly" required>
+                                            <label class="form-check-label" for="flexRadioDefault13">
+                                                Monthly
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question3"
+                                                id="flexRadioDefault14" value="Rarely" required>
+                                            <label class="form-check-label" for="flexRadioDefault14">
+                                                Rarely
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="pt-2 heading fw-semibold">4. Did you encounter any issues while using
+                                        Shop Sum?</div>
+                                    <div class="container">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question4"
+                                                id="flexRadioDefault15" value="Yes" required>
+                                            <label class="form-check-label" for="flexRadioDefault15">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question4"
+                                                id="flexRadioDefault16" value="No" required>
+                                            <label class="form-check-label" for="flexRadioDefault16">
+                                                No
+                                            </label>
+                                        </div>
+                                        <div class="d-none" id="issueDetails">
+                                            <label for="issueField" class="form-label">If Yes, please describe the
+                                                issue,</label>
+                                            <textarea type="text" class="form-control mw-md-50 " id="issueField"
+                                                placeholder="here.."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="pt-2 heading fw-semibold">5. How likely are you to recommend Shop Sum to
+                                        others?</div>
+                                    <div class="container">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question5"
+                                                id="flexRadioDefault17" value="Shout_It_from_the_Rooftops" required>
+                                            <label class="form-check-label" for="flexRadioDefault17">
+                                                Shout It from the Rooftops
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question5"
+                                                id="flexRadioDefault18" value="Tell_a_Friend" required>
+                                            <label class="form-check-label" for="flexRadioDefault18">
+                                                Tell a Friend
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question5"
+                                                id="flexRadioDefault19" value="Might_Mention_It" required>
+                                            <label class="form-check-label" for="flexRadioDefault19">
+                                                Might Mention It
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question5"
+                                                id="flexRadioDefault20" value="Probably_Not" required>
+                                            <label class="form-check-label" for="flexRadioDefault20">
+                                                Probably Not
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question5"
+                                                id="flexRadioDefault21" value="Nope_Keeping_It_to_Myself" required>
+                                            <label class="form-check-label" for="flexRadioDefault21">
+                                                Nope, Keeping It to Myself
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-10">
+
+                                    <label for="additionalComm" class="form-label heading fw-semibold">6. Any additional
+                                        comments or
+                                        suggestions?<span class="fs-7 fw-8">(Optional)</span></label>
+                                    <div class="container">
+                                        <textarea type="text" class="form-control" id="additionalComm"
+                                            placeholder="spill the beans.."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+
+                                    <div class="pt-2 heading fw-semibold">7. Would you like us to contact you regarding
+                                        your feedback?</div>
+                                    <div class="container">
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question6"
+                                                id="flexRadioDefault22" value="Yes" required>
+                                            <label class="form-check-label" for="flexRadioDefault22">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input border-primary" type="radio" name="question6"
+                                                id="flexRadioDefault22" value="No" required>
+                                            <label class="form-check-label" for="flexRadioDefault22">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="container pt-4">
+                                <div class="text-md-center">
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="submitSuccess" class="d-none">
+        <div class="row pt-5 mt-5">
+            <div class="col-12">
+                <div class="fs-4 fw-semibold text-center">Thank you for your Feedback!!</div>
+            </div>
+            <div class="col-12 text-center mt-5 pt-5">
+                <a href="/" class="btn btn-primary " id="homeBtn">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <iframe src="" id="submittedForm" class="d-none"></iframe>
+
+    <footer class="mt-auto pt-2 pt-md-2 pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center" id="socialFB">
+                    <a href="https://github.com/makersmecca/Project-ShopSum" target="_blank">
+                        <!-- <img src="images/icons/social-media-logos/facebook-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-facebook d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-2 d-md-flex align-items-center" id="socialTwtr">
+                    <a href="https://github.com/makersmecca/Project-ShopSum" target="_blank">
+                        <!-- <img src="images/icons/social-media-logos/twitter-32.png" id="" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" id="dark"
+                            class="bi bi-twitter-x pt-1" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#2e66a5" id="light"
+                            class="bi bi-twitter-x pt-1 d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col col-md-1 pb-md-1 d-md-flex align-items-center" id="socialGtHb">
+                    <a href="https://github.com/makersmecca/Project-ShopSum" target="_blank">
+                        <!-- <img src="images/icons/social-media-logos/github-black-32.png" class="icon bg-light" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" id="dark"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#2e66a5" id="light"
+                            class="bi bi-github d-none" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-12 col-md-9 d-md-flex justify-content-end pt-3 pt-md-2">
+                    <a class="text-center url" id="appVer" href="/">© 2024 Copyright: ShopSum</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--d-none elements-->
+    <div id="calculator-cont"></div>
+
+    <!-- registering service worker -->
+    <!-- <script src="scripts/registerSW.js" type="module"></script> -->
+    <script src="scripts/registerSW.min.js" type="module"></script>
+
+    <!-- links for Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
