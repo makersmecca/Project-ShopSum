@@ -1,4 +1,4 @@
-const version = "v0.8.7.1"
+const version = "v0.8.7.4"
 const serviceworkerobj = "shopsummary_" + version;
 // console.log(serviceworkerobj);
 // console.log('hello from service worker');
