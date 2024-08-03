@@ -1,6 +1,6 @@
 <img src="/ShopSum-poster.png">
 <h2>SHOP SUM</h2>
-ShopSum is live! <a href = "https://letsshopsum.netlify.app">Check out ShopSum</a>.<br/>
+ShopSum is live! <a href = "https://letsshopsum.netlify.app" rel="noopener noreferrer" target="_blank">Check out ShopSum</a>.<br/>
 ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and even our humble Corner/Kirana Stores.<br/>
 <br>
 <div><strong>!! NOTE !!</strong></div>
@@ -15,7 +15,7 @@ The UPI ID gets linked to your sign-in method and just like that you’re good t
 <ul>
     <li>Easy Log-In: Sign up using your Email ID, Phone Number, or your Google account, seamlessly.</li>
     <li>QR Code Payment: Generate a QR Code for the calculated amount effortlessly every time.</li>
-    <li>Privacy: ShopSum doesn’t require KYC Verification to use. Anyone can register and start using ShopSum. Check our <a href="https://letsshopsum.netlify.app/termsncons">T&C</a> for more details.</li>
+    <li>Privacy: ShopSum doesn’t require KYC Verification to use. Anyone can register and start using ShopSum. Check our <a href="https://letsshopsum.netlify.app/termsncons" rel="noopener noreferrer" target="_blank">T&C</a> for more details.</li>
     <li>Not just for business owners! 
     ShopSum is perfect for individuals too. Imagine a group of friends going out, where one person pays the entire bill. With ShopSum, splitting the bill is a breeze. The person who paid can generate a QR code for their friends to scan and pay back their exact shares seamlessly.</li>
 </ul>
@@ -32,6 +32,6 @@ The UPI ID gets linked to your sign-in method and just like that you’re good t
 </ul>
 <h3>Feedback</h3>
 We value your feedback and are constantly working to improve ShopSum. <br/>
-Feel free to share your thoughts and suggestions <a  href="https://letsshopsum.netlify.app/feedbackform">here</a>. We would love to hear from you!<br/>
+Feel free to share your thoughts and suggestions <a  href="https://letsshopsum.netlify.app/feedbackform" rel="noopener noreferrer" target="_blank">here</a>. We would love to hear from you!<br/>
 <h3>Terms of Use</h3>
-Please refer to our <a href="https://letsshopsum.netlify.app/termsncons">Terms of Use</a> page for more information regarding the same.
+Please refer to our <a href="https://letsshopsum.netlify.app/termsncons" rel="noopener noreferrer" target="_blank">Terms of Use</a> page for more information regarding the same.
