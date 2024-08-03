@@ -3,7 +3,15 @@
 ShopSum is live! <a href = "https://letsshopsum.netlify.app" target="_blank" rel="noopener noreferrer">Check out ShopSum</a>.<br/>
 ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and even our humble Corner/Kirana Stores.<br/>
 <br>
-<div><strong>!! NOTE !!</strong></div>
+<div>
+
+███╗  ██╗ █████╗ ████████╗███████╗██╗██╗
+████╗ ██║██╔══██╗╚══██╔══╝██╔════╝██║██║
+██╔██╗██║██║  ██║   ██║   █████╗  ██║██║
+██║╚████║██║  ██║   ██║   ██╔══╝  ╚═╝╚═╝
+██║ ╚███║╚█████╔╝   ██║   ███████╗██╗██╗
+</div>
+
 <strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here to prevent security issues.</strong><br>
 <br>
 The interface of the app is essentially based around a Calculator, to calculate the total cost of all the items in an order and receive payments through a single-use QR Code, generated specifically for the current transaction amount, scannable via any UPI App.<br/>
