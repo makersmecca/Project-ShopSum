@@ -32,6 +32,6 @@ The UPI ID gets linked to your sign-in method and just like that you’re good t
 </ul>
 <h3>Feedback</h3>
 We value your feedback and are constantly working to improve ShopSum. <br/>
-Feel free to share your thoughts and suggestions <a  href="https://letsshopsum.netlify.app/feedback">here</a>. We would love to hear from you!<br/>
+Feel free to share your thoughts and suggestions <a  href="https://letsshopsum.netlify.app/feedbackform">here</a>. We would love to hear from you!<br/>
 <h3>Terms of Use</h3>
 Please refer to our <a href="https://letsshopsum.netlify.app/termsncons">Terms of Use</a> page for more information regarding the same.
