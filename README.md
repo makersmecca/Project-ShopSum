@@ -5,11 +5,11 @@ ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and 
 <br>
 <div>
 
-███╗  ██╗ █████╗ ████████╗███████╗██╗██╗
-████╗ ██║██╔══██╗╚══██╔══╝██╔════╝██║██║
-██╔██╗██║██║  ██║   ██║   █████╗  ██║██║
-██║╚████║██║  ██║   ██║   ██╔══╝  ╚═╝╚═╝
-██║ ╚███║╚█████╔╝   ██║   ███████╗██╗██╗
+███╗  ██╗ █████╗ ████████╗███████╗██╗██╗<br>
+████╗ ██║██╔══██╗╚══██╔══╝██╔════╝██║██║<br>
+██╔██╗██║██║  ██║   ██║   █████╗  ██║██║<br>
+██║╚████║██║  ██║   ██║   ██╔══╝  ╚═╝╚═╝<br>
+██║ ╚███║╚█████╔╝   ██║   ███████╗██╗██╗<br>
 </div>
 
 <strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here to prevent security issues.</strong><br>
