@@ -1,8 +1,27 @@
+
+<!-- HTML Codes by Quackit.com -->
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+background-color: #ffffff;
+}
+div.container p {
+font-family: Arial;
+font-size: 14px;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+color: #000000;
+background-color: #ffffff;
+}
+</style>
 <img src="/ShopSum-poster.png">
 <h2>SHOP SUM</h2>
 ShopSum is live! <a href = "https://letsshopsum.netlify.app" target="_blank" rel="noopener noreferrer">Check out ShopSum</a>.<br/>
 ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and even our humble Corner/Kirana Stores.<br/>
-<br>
+
 <div class="container">
 <p>███╗  ██╗ █████╗ ████████╗███████╗██╗██╗</p>
 <p>████╗ ██║██╔══██╗╚══██╔══╝██╔════╝██║██║</p>
@@ -10,6 +29,7 @@ ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and 
 <p>██║╚████║██║  ██║   ██║   ██╔══╝  ╚═╝╚═╝</p>
 <p>██║ ╚███║╚█████╔╝   ██║   ███████╗██╗██╗</p>
 </div>
+<br>
 
 <strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here to prevent security issues.</strong><br>
 <br>
