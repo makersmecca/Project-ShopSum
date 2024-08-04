@@ -14,7 +14,7 @@ The UPI ID gets linked to your sign-in method and just like that you’re good t
 <br/>
 <h3>Features</h3>
 <ul>
-    <li>Easy Log-In: Sign up using your Email ID, Phone Number, or your Google account, seamlessly.</li>
+    <li>Easy Log-In: Sign up using your Email ID, Google OAuth, or Phone Number seamlessly.</li>
     <li>QR Code Payment: Generate a QR Code for the calculated amount effortlessly every time.</li>
     <li>Privacy: ShopSum doesn’t require KYC Verification to use. Anyone can register and start using ShopSum. Check our <a href="https://letsshopsum.netlify.app/termsncons" rel="noopener noreferrer" target="_blank">T&C</a> for more details.</li>
     <li>Not just for business owners! 
