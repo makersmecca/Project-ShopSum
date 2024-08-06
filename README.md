@@ -5,7 +5,7 @@ ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and 
 <br>
 <div><strong>!! NOTE !!</strong></div>
 
-<strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here to prevent security issues.</strong><br>
+<strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here for security reasons.</strong><br>
 <br>
 The interface of the app is essentially based around a Calculator, to calculate the total cost of all the items in an order and receive payments through a single-use QR Code, generated specifically for the current transaction amount, scannable via any UPI App.<br/>
 <br/>
