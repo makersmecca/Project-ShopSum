@@ -3,7 +3,7 @@
 ShopSum is live! <a href = "https://letsshopsum.netlify.app" target="_blank" rel="noopener noreferrer">Check out ShopSum</a>.<br/>
 ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and even our humble Corner/Kirana Stores.<br/>
 <br>
-<div><strong>!! NOTE !!</strong></div>
+<div><strong>!! NOTE !!</strong></div><span></span>
 
 <strong>This repo contains just the bare minimum files to run ShopSum, the original files are not included here for security reasons.</strong><br>
 <br>
