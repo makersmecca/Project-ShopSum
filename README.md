@@ -1,5 +1,6 @@
 <img src="/ShopSum-poster.png">
 <h2>SHOP SUM</h2>
+<img src="https://api.netlify.com/api/v1/badges/73bfc742-9bf9-40b1-a121-06b5b4f0cf90/deploy-status"/>
 ShopSum is live! <a href = "https://letsshopsum.netlify.app" target="_blank" rel="noopener noreferrer">Check out ShopSum</a>.<br/>
 ShopSum, a Progressive Web App designed for Roadside Stalls, Small Vendors, and even our humble Corner/Kirana Stores.<br/>
 <br>
